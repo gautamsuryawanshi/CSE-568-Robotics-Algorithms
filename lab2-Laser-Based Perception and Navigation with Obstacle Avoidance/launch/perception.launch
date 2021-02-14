@@ -1,0 +1,6 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros" args="$(find lab2)/world/playground1.world" />
+	<node pkg="lab2" type="percept.py" name="scan_values" output="screen" />
+	<node name="rviz" pkg="rviz" type="rviz" args="$(find lab2)/rviz/default.rviz" />
+	
+</launch>
